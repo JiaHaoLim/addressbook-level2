@@ -75,4 +75,39 @@ public class SortCommand extends Command {
         return true;
     }
 
+    static class Ascend implements Comparator<Person> {
+
+        /**
+         * compare()
+         * Overrides Comparator compare.
+         * Compare input strings.
+         *
+         * @param p1 String 1
+         * @param p2 String 2
+         * @return 1 if p1 p2 is in ascending order
+         *         -1 if p1 p2 is in descending order
+         *         0 if p1 and p2 are the same
+         */
+        public int compare(Person p1, Person p2) {
+            return p1.getName().toString().compareTo(p2.getName().toString());
+        }
+    }
+
+    static class Descend implements Comparator<Person> {
+
+        /**
+         * compare()
+         * Overrides Comparator compare.
+         * Compare input strings.
+         *
+         * @param p1 String 1
+         * @param p2 String 2
+         * @return 1 if p1 p2 is in ascending order
+         *         -1 if p1 p2 is in descending order
+         *         0 if p1 and p2 are the same
+         */
+        public int compare(Person p1, Person p2) {
+            return p2.getName().toString().compareTo(p1.getName().toString());
+        }
+    }
 }
