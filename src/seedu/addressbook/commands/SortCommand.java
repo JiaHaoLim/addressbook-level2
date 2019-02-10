@@ -43,6 +43,7 @@ public class SortCommand extends Command {
      * @param commandArgs full command args string from the user
      * @return feedback display message for the operation result
      */
+    @SuppressWarnings("unchecked")
     private boolean executeSortList(String commandArgs) {
         Iterable<Person> iterable = addressBook.getAllPersons();
         ArrayList<Person> list = new ArrayList<>();
@@ -75,7 +76,7 @@ public class SortCommand extends Command {
         return true;
     }
 
-    static class Ascend implements Comparator<Person> {
+    class Ascend implements Comparator<Person> {
 
         /**
          * compare()
@@ -93,7 +94,7 @@ public class SortCommand extends Command {
         }
     }
 
-    static class Descend implements Comparator<Person> {
+    class Descend implements Comparator<Person> {
 
         /**
          * compare()
