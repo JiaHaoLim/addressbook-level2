@@ -17,7 +17,7 @@ public class SortCommand extends Command {
     public static final String COMMAND_WORD = "sort";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD
-            + ": Sorts the address book based on the input order.\n"
+            + ": Sorts the address book by name based on the input order.\n"
             + "Parameters: ascend, descend\n"
             + "Example: " + COMMAND_WORD + " ascend";
 
