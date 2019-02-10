@@ -55,6 +55,19 @@
   add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy
 
 ##########################################################
+# test sort command
+##########################################################
+
+  # should catch invalid args format
+  sort
+  sort abc
+
+  # should add correctly and list non private information
+  sort ascend
+  sort descend
+  sort ascend
+
+##########################################################
 # test view/viewall persons command
 ##########################################################
 
